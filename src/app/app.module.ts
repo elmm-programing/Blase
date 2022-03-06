@@ -9,11 +9,13 @@ import {FormsModule} from '@angular/forms';
 import {AngularFireModule} from '@angular/fire/compat';
 import {environment} from 'src/environments/environment';
 import { MainComponent } from './components/main/main.component';
+import { RegistrarComponent } from './components/registrar/registrar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,10 @@
-
- 
 <app-main></app-main>
 <div class="card text-center">
   <div class="card-header">
-    <h5 class="card-title"> Sign in</h5>
+    <h5 class="card-title">Registrar</h5>
   </div>
   <div class="card-body">
 <form>
-
     <div class="form-floating">
       <input type="email" class="form-control"  placeholder="email" [(ngModel)]="usuario.email" name="email">
       <label for="floatingInput">Email address</label>
@@ -16,14 +13,9 @@
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuario.password"  name="password">
       <label for="floatingPassword">Password</label>
     </div>
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="Ingresar()">Sign in</button>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="IngresarWithGoogle()">Sign in with Google</button>
+    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="Ingresar()">Registrarse</button>
+    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="IngresarWithGoogle()">Registrarse con google</button>
   </form>
   </div>
 </div>
+

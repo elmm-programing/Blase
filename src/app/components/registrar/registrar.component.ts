@@ -2,23 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from 'src/app/services/login.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-registrar',
+  templateUrl: './registrar.component.html',
+  styleUrls: ['./registrar.component.css']
 })
-export class LoginComponent implements OnInit {
-
-  constructor(private loginService: LoginService) {
-
-  }
-
-  public usuario: {email:string;password:string;} ={
+export class RegistrarComponent implements OnInit {
+ public usuario: {email:string;password:string;} ={
     email: '',
     password: ''
   }
-  public Ingresar(): any {
+  constructor(private loginService: LoginService) { }
+public Ingresar(): any {
     if (this.usuario.email && this.usuario.password) {
-      this.loginService.login(this.usuario.email, this.usuario.password).then( (res)=>{
+      this.loginService.register(this.usuario.email, this.usuario.password).then( (res)=>{
 	console.log("Se inicio sesion: ",res);
       } )	
     }else{
@@ -26,7 +22,7 @@ alert("Insert some values")
     }
   	
   }
-  public IngresarWithGoogle(): any {
+public IngresarWithGoogle(): any {
 
       this.loginService.loginWithGoogle(this.usuario.email, this.usuario.password).then( (res)=>{
 	console.log("Se registro: ",res);
@@ -34,7 +30,6 @@ alert("Insert some values")
   	
   }
   ngOnInit(): void {
-
   }
 
 }

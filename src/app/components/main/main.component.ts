@@ -4,7 +4,7 @@ import {LoginService} from 'src/app/services/login.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.sass']
+  styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
   UserLogged = this.loginService.getUserLogged(); 
