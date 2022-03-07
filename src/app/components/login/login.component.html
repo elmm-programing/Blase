@@ -1,29 +1,26 @@
 
  
-<app-main></app-main>
-<div class="card text-center">
-  <div class="card-header">
-    <h5 class="card-title"> Sign in</h5>
-  </div>
-  <div class="card-body">
-<form>
-
-    <div class="form-floating">
+  <div class="main-container">
+    <div class="container">
+      <div class="form-logo">
+        <img src="../../../assets/Logo-2.png" alt="">
+        <h1>°Bienvenido!</h1>
+      </div>
+      <div class="form-container">
+        <div class="image-2">
+          <img src="../../../assets/Blase-Logo.png" alt="">
+        </div>
+        <div class="form-login">
+          <form action="" class="form-l">
       <input type="email" class="form-control"  placeholder="email" [(ngModel)]="usuario.email" name="email">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating ">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuario.password"  name="password">
-      <label for="floatingPassword">Password</label>
-    </div>
+<input class="btn-1" type="submit" value="Iniciar Sesion" (click)="Ingresar()">
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
+    <input class="btn-1" type="submit" value="Iniciar Sesion con Google" (click)="IngresarWithGoogle()">
+            <input class="btn-2" [routerLink]="['/registrar']" type="submit" value="Registrarse">
+          </form>    
+        </div>
+      </div>
     </div>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="Ingresar()">Sign in</button>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="IngresarWithGoogle()">Sign in with Google</button>
-  </form>
   </div>
-</div>
+

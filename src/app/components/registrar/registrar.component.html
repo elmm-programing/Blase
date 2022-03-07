@@ -1,21 +1,28 @@
-<app-main></app-main>
-<div class="card text-center">
-  <div class="card-header">
-    <h5 class="card-title">Registrar</h5>
-  </div>
-  <div class="card-body">
-<form>
-    <div class="form-floating">
+  <div class="main-container">
+    <div class="container">
+      <div class="form-container">
+        <div class="image-2">
+          <img src="../../../assets/Blase-Logo.png" alt="">
+        </div>
+        <div class="form-register">
+          <form action="" class="form-r">
+      <input type="text" class="form-control"  placeholder="name" [(ngModel)]="usuario.name" name="name">
       <input type="email" class="form-control"  placeholder="email" [(ngModel)]="usuario.email" name="email">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating ">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuario.password"  name="password">
-      <label for="floatingPassword">Password</label>
+	    <input class="btn-1" type="submit" value="Registrarse" (click)="Ingresar()">
+    <input class="btn-1" type="submit" value="Registrarse con google" (click)="IngresarWithGoogle()">
+
+            
+          </form>    
+        </div>
+      </div>
+      <div class="form-logo">
+        <img src="../../../assets/update.jpg" alt="">
+
+<input type="file" (change)="upload($event)" accept=".png,.jpg" />
+      <input type="text"   placeholder="Comentario de perfil" [(ngModel)]="usuario.comentario" name="comentario">
+      </div>
     </div>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="Ingresar()">Registrarse</button>
-    <button class="col-3 btn btn-lg btn-primary" type="submit" (click)="IngresarWithGoogle()">Registrarse con google</button>
-  </form>
   </div>
-</div>
+
 

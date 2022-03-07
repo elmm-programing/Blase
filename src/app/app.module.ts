@@ -10,6 +10,7 @@ import {AngularFireModule} from '@angular/fire/compat';
 import {environment} from 'src/environments/environment';
 import { MainComponent } from './components/main/main.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
+import { AngularFireStorageModule,BUCKET  } from '@angular/fire/compat/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +23,12 @@ import { RegistrarComponent } from './components/registrar/registrar.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+     { provide: BUCKET, useValue: 'gs://prog-iii.appspot.com' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
