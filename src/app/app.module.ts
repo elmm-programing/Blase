@@ -11,12 +11,14 @@ import {environment} from 'src/environments/environment';
 import { MainComponent } from './components/main/main.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
 import { AngularFireStorageModule,BUCKET  } from '@angular/fire/compat/storage';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
