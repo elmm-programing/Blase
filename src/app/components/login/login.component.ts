@@ -18,9 +18,14 @@ export class LoginComponent implements OnInit {
   }
   public Ingresar(): any {
     if (this.usuario.email && this.usuario.password) {
-      this.loginService.login(this.usuario.email, this.usuario.password).then( (res)=>{
+      this.loginService.login(this.usuario.email, this.usuario.password).then( (res:any)=>{
+	if (res.user.uid) {
 	 this._router.navigateByUrl('/main')
 	console.log("Se inicio sesion: ",res);
+	}else{
+	  alert('No se ah encontrado el usuario')
+
+	}
       } )	
     }else{
 alert("Insert some values")

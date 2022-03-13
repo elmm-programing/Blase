@@ -1,3 +1,49 @@
+<div class=" col-12   d-flex align-items-center  " style="height:100vh">
+
+<div class="col-md-7 h-50 mx-auto row   ">
+  <div class="col-6 " style="background-color:#F0F0F0; border-radius: 10px;">
+	   <img src="../../../assets/Blase-Logo.png" alt="" class=" d-block mx-auto" width="45%">
+	   <div class="col-12">
+<form  class="col-12" >
+  <div class="mb-3 mx-auto   col-9" >
+          <input type="text" class="form-control "  placeholder="Nombre" [(ngModel)]="usuario.name" name="name">
+
+  </div>
+  <div class="mb-3 mx-auto  col-9">
+          <input type="email" class="form-control"  placeholder="Correo" [(ngModel)]="usuario.email" name="email">
+
+  </div>
+    <div class="mb-3 mx-auto  col-9">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuario.password"  name="password">
+
+  </div>
+
+  <div class="mb-3 mx-auto col-7">
+    	       <input class="btn  text-light col-12 text-wrap" style="background-color:#48DCE6 ;"  type="submit" value="Registrarse" (click)="Ingresar()">
+  <div class="mb-3 mx-auto mt-3 col-12">
+        <input class="btn  text-light col-12 text-wrap"  style="background-color:#FC4F83 ;" type="submit" value="Registrarse con google" (click)="IngresarWithGoogle()">  </div>
+
+  </div>
+ 
+     </form>
+	   </div>
+           
+</div>
+
+	<div class="col-6" style="background-color:#384D6A; border-radius: 10px;">
+	  <img src="../../../assets/update.jpg" class="mx-auto d-block pt-5 col-9"  alt="">
+<div class="mb-3 mx-auto col-8">
+
+<input type="file" class="btn text-light" (change)="upload($event)" accept=".png,.jpg" />
+</div>
+<div class="mb-3 mx-auto col-8">
+      <input type="text" class="form-control mx-auto  col-12 text-wrap"   placeholder="Comentario de perfil" [(ngModel)]="usuario.comentario" name="comentario">
+</div>
+
+	  </div>
+
+	</div>
+<!--
   <div class="main-container">
     <div class="container">
       <div class="form-container">
@@ -6,10 +52,6 @@
         </div>
         <div class="form-register">
           <form action="" class="form-r">
-      <input type="text" class="form-control"  placeholder="Nombre" [(ngModel)]="usuario.name" name="name">
-      <input type="email" class="form-control"  placeholder="Correo" [(ngModel)]="usuario.email" name="email">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="usuario.password"  name="password">
-	    <input class="btn-1" type="submit" value="Registrarse" (click)="Ingresar()">
     <input class="btn-1" type="submit" value="Registrarse con google" (click)="IngresarWithGoogle()">
 
             
@@ -17,12 +59,8 @@
         </div>
       </div>
       <div class="form-logo">
-        <img src="../../../assets/update.jpg" alt="">
-
-<input type="file" (change)="upload($event)" accept=".png,.jpg" />
-      <input type="text"   placeholder="Comentario de perfil" [(ngModel)]="usuario.comentario" name="comentario">
-      </div>
+              </div>
     </div>
   </div>
 
-
+-->
