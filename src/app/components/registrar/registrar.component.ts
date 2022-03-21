@@ -47,18 +47,7 @@ alert("Insert some values")
     }
   	
   }
-public IngresarWithGoogle(): any {
-    if (this.usuario.comentario &&this.filePath) {
-  this.loginService.loginWithGoogle(this.usuario.email, this.usuario.password).then( (res:any)=>{
-	const itemsRef = this.db.list('usuarios');
-	itemsRef.set(res.user.uid,{name:res.user.displayName,comentario:this.usuario.comentario});
-	this.uploadImage(res.user.uid);
-	this._router.navigateByUrl('/main')
-	console.log("Se registro: ",res);
-      } )	
-    }else{
-      alert("Necesita llenar el campo de comentario")
-    }}
+
   ngOnInit(): void {
   }
 

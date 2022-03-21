@@ -32,15 +32,7 @@ alert("Insert some values")
     }
   	
   }
-  public IngresarWithGoogle(): any {
-
-      this.loginService.loginWithGoogle(this.usuario.email, this.usuario.password).then( (res)=>{
-	 this._router.navigateByUrl('/main')
-	console.log("Se registro: ",res);
-      } )	
-  	
-  }
-  ngOnInit(): void {
+    ngOnInit(): void {
 
   }
 

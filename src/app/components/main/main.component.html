@@ -1,10 +1,12 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" *ngIf="UserLogged|async as user">
-      <img *ngIf="user.photoURL" [src]="user.photoURL"  width="40" height="44" class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="#" *ngIf="UserLogged|async as user" >
+      <img  [src]="profileUrl | async"   width="40" height="44" class="d-inline-block align-text-top">
       {{user.email}}
     </a>
-    <form class="d-flex">
+    <form class="d-flex" *ngIf="UserLogged|async as user">
+      <input type="text" ngIf="false" [(ngModel)]="UserId" value="{{user.uid}}">
+
       <button class="btn btn-outline-success" type="submit" (click)="obtenerUsuarioLogeado()">Usuario logeado</button>
       <button class="btn btn-outline-success" type="submit" (click)="logout()">Logout</button>
     </form>

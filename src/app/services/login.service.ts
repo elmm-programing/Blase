@@ -8,6 +8,7 @@ export class LoginService {
 
   constructor(private afauth: AngularFireAuth) { }
 
+
  public async register( email: string, password: string)  {
     try{
       return await this.afauth.createUserWithEmailAndPassword(email,password);
@@ -27,17 +28,6 @@ export class LoginService {
     }
   	
   }
-public async loginWithGoogle( email: string, password: string)  {
-    try{
-      return await this.afauth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
-
-    }catch(e){
-      console.log("Error in login",e);
-      return null;
-    }
-  	
-  }
-
   public getUserLogged()  {
     return this.afauth.authState;
   }
