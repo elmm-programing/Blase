@@ -1,0 +1,190 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+
+*{
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+#toggle{
+  display: none;
+}
+
+
+#container{
+  position: relative;
+  left: 0;
+  transition: 0.3s left;
+  padding: 30px;
+}
+
+#menu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background-color: #384E6A;
+  transition: 0.3s left;
+}
+
+#menu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#menu > ul > li > a{
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+}
+
+#menu > ul > li > a:hover{
+  background-color: #253850;
+}
+
+#container{
+  left: 20%;
+  position: fixed;
+}
+
+
+#toggle:checked~#menu{
+    left: -100%;
+
+}
+
+#toggle:checked~.principal{
+    left: 0;
+}
+
+#toggle~#menu{
+  left: 0;
+
+}
+
+
+#toggle~.principal{
+  left: -100%;
+
+}
+
+#container{
+  width: calc(100% - 240px);
+}
+
+
+label[for=toggle]{
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2[for=toggle]{
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.option{
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+img{
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.box{
+  border-radius: 5%;
+  color: black;
+  background: white;
+  width: 150px;
+  height: 50px;
+  /* padding: 10px; */
+  margin: 5px;
+}
+
+.box h3{
+  font-size: 10px;
+  margin: 15px;
+}
+
+
+/* Perfil */
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.principal {
+    width: 20%;
+    left: -30%;
+    position: relative;
+    transition: 0.3s left;
+}
+
+
+.bar-color {
+    background-color: #384D6A;
+}
+
+.principal_content {
+  padding-bottom: 100%;
+}
+
+.principal_content_color {
+    background-color: #F0F0F0;
+}
+
+.labelColor {
+    color: #48DCE6;
+}
+
+.dataColor {
+    color: #000;
+}
+
+.warning-color {
+    color: #FC4F83;
+}
+
+input {
+    border: none;
+    color: #000;
+    width: 70%;
+}
+
+input:focus-visible {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.bi-check-lg {
+    font-size: 22px;
+}
+
+#p{
+  position: relative;
+  left: 10%;
+  margin-top: 5%;
+}

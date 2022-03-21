@@ -14,7 +14,7 @@ export class LoginService {
       return await this.afauth.createUserWithEmailAndPassword(email,password);
 
     }catch(e){
-      console.log("Error in login",e);
+      console.log("Error in registrar",e);
       return null;
     }
   }
@@ -23,7 +23,7 @@ export class LoginService {
       return await this.afauth.signInWithEmailAndPassword(email,password);
 
     }catch(e){
-      console.log("Error in login",e);
+      alert("El email o la contraseña son incorrectas")
       return null;
     }
   	

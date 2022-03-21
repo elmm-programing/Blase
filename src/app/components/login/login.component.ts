@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {LoginService} from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 @Component({
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+   UserId:any;
 
   constructor(private loginService: LoginService,private _router: Router) {
 
@@ -18,15 +19,19 @@ export class LoginComponent implements OnInit {
   }
   public Ingresar(): any {
     if (this.usuario.email && this.usuario.password) {
-      this.loginService.login(this.usuario.email, this.usuario.password).then( (res:any)=>{
+      try {
+      	this.loginService.login(this.usuario.email, this.usuario.password).then( (res:any)=>{
 	if (res.user.uid) {
-	 this._router.navigateByUrl('/main')
+	  this.UserId = res.user.uid
+	  this._router.navigate(['main',{uid:this.UserId}])
 	console.log("Se inicio sesion: ",res);
-	}else{
-	  alert('No se ah encontrado el usuario')
-
 	}
-      } )	
+      } )
+      } catch (e) {
+	alert('No se ah encontrado el usuario verifique su contraseña o email')
+      	/* handle error */
+      }
+      	
     }else{
 alert("Insert some values")
     }

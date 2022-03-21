@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {LoginService} from 'src/app/services/login.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import {Observable} from 'rxjs';
 @Component({
@@ -10,20 +10,21 @@ import {Observable} from 'rxjs';
 })
 export class MainComponent implements OnInit {
   UserLogged = this.loginService.getUserLogged(); 
-  UserId:any;
+  UserId:string|null|undefined;
   profileUrl: Observable<string | null>;
   ref:any;
-  constructor(private loginService: LoginService,private _router: Router,private storage: AngularFireStorage) {
+  constructor(private loginService: LoginService,private route: ActivatedRoute,private _router: Router,private storage: AngularFireStorage) {
+    this.UserId = this.route.snapshot.paramMap.get('uid');
     console.log(this.UserId);
-const ref = this.storage.ref(`/users/0TYdI3zITHgxCXpTeZNZdABtbV62`);
+const ref = this.storage.ref(`/users/${this.UserId}`);
      this.profileUrl = ref.getDownloadURL();
+
+		
       }
-  
 public obtenerUsuarioLogeado() {
   	
     this.loginService.getUserLogged().subscribe( res =>{
       console.log(res?.email);
-      this.UserId = res?.uid;
       console.log(this.UserId);
       return res?.email;
     });
@@ -37,6 +38,7 @@ public obtenerUsuarioLogeado() {
 
 
   ngOnInit(): void {
+    console.log(this.UserId);
   }
 
 }
