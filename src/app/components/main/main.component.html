@@ -16,6 +16,7 @@
 </nav>
 
 -->
+
 <div class="body">
 
     <div id="wrapper">
@@ -23,7 +24,10 @@
       <input type="checkbox" id="toggle">
   
   
-      <div id="container">
+      <div id="container" >
+		   <h1></h1>
+		   <h1></h1>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto sapiente odit maxime amet aut atque totam tempore, inventore obcaecati excepturi nostrum magni consectetur natus nisi quas possimus quo accusamus omnis.</p>
       </div>
       <div id="menu">
@@ -79,16 +83,16 @@
         
         <img class="rounded-circle w-50 ms-auto me-auto pt-4 pb-4" [src]="profileUrl | async"   alt="">
         
-        <div class="d-flex flex-column ps-5 pe-3">
+        <div class="d-flex flex-column ps-5 pe-3" >
   
             <span class="pb-3 fw-bold labelColor">Nombre</span>
   
-            <div class="pb-4"><input class="dataColor h6 bg-transparent" type="text" value="Jack Wilder ◢◤"><button class="btn bg-transparent bi bi-check-lg ms-2"></button></div>
+            <div class="pb-4"><input class="dataColor h6 bg-transparent" type="text" value="{{ name|async }} "><button class="btn bg-transparent bi bi-check-lg ms-2"></button></div>
             
             
             <span class="pb-3 fw-bold labelColor">Acerca de mi</span>
   
-            <div class="pb-2"><input class="dataColor h6 bg-transparent" type="text" value="Tomorrow will be another day"><button class="btn bg-transparent bi bi-check-lg ms-2"></button></div>
+            <div class="pb-2"><input class="dataColor h6 bg-transparent" type="text" value="{{ comentario|async }}"><button class="btn bg-transparent bi bi-check-lg ms-2"></button></div>
         </div>
     </div>
   </div>
