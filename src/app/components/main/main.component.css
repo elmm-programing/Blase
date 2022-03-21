@@ -108,10 +108,13 @@ h2[for=toggle]{
   position: relative;
 }
 
-img{
+#menu img{
   width: 40px;
   margin-right: 20px;
   border-radius: 50%;
+}
+#perfil{
+  margin-bottom:10%;
 }
 
 .box{

@@ -1,3 +1,5 @@
+<!--
+
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" *ngIf="UserLogged|async as user" >
@@ -12,7 +14,8 @@
     
   </div>
 </nav>
-<!--
+
+-->
 <div class="body">
 
     <div id="wrapper">
@@ -28,31 +31,32 @@
           <li><a>
             <div id="perfil">
               <label for="toggle">
+              <img [src]="profileUrl | async" alt="">
              </label>
             </div>
           </a></li>
           
-          <li><a href="">
+          <li><a >
             <div class="option">
-              <img src="assets/img_avatar.png" alt="">
+              <img src="../../../assets/unknown.png" alt="">
               <div class="box">
                 <h3>Pedro</h3>
               </div>
             </div>
           </a></li>
   
-          <li><a href="">
+          <li><a >
             <div class="option">
-              <img src="assets/img_avatar.png" alt="">
+              <img src="../../../assets/unknown.png" alt="">
               <div class="box">
                 <h3>Pedro</h3>
               </div>
             </div>
           </a></li>
   
-          <li><a href="">
+          <li><a >
             <div class="option">
-              <img src="assets/img_avatar.png" alt="">
+              <img src="../../../assets/unknown.png" alt="">
               <div class="box">
                 <h3>Pedro</h3>
               </div>
@@ -73,7 +77,7 @@
     </div>
     <div class="d-flex flex-column overflow-auto principal_content principal_content_color">
         
-        <img class="rounded-circle w-50 ms-auto me-auto pt-4 pb-4" src="https://i.pinimg.com/736x/00/ec/6b/00ec6b1a19a8dd9dee3949d4f7b09c1b.jpg" alt="">
+        <img class="rounded-circle w-50 ms-auto me-auto pt-4 pb-4" [src]="profileUrl | async"   alt="">
         
         <div class="d-flex flex-column ps-5 pe-3">
   
@@ -94,4 +98,3 @@
 </div>
 </div>
 
--->
